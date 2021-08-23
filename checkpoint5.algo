@@ -1,0 +1,28 @@
+ALGORITHM conpteur 
+VAR
+    phrase=STRING;
+    Ncaract=INTEGER=1;
+    Nmot=INTEGER=1;
+    Nvowels=INTEGER;
+    i=INTEGER;
+BEGIN
+Read(phrase)
+FOR i FROM 0 TO phrase.length STEP 1  DO
+    WHILE (phrase[phrase.length]=".") DO
+    IF (phrase[i]<>".") THEN
+        Ncaract:=++;
+    END_IF
+        IF (phrase[i]=" ") THEN
+            Nmot:=Nmot+1;
+        END_IF
+        IF (phrase[i]="a"or phrase[i]="e"or phrase[i]="y" phrase[i]="i" phrase[i]="o" phrase[i]="u" or phrase[i]="A"or phrase[i]="E"or phrase[i]="Y" phrase[i]="I" phrase[i]="O" phrase[i]="U") THEN
+        Nvowels++;
+        END_IF
+        BREAK;
+    END_WHILE
+    Write ("phrase")
+END_FOR
+write("The length of the sentence =",Ncaract)
+Write("The number of words in the sentence ",Nmot)
+Write("The number of vowels in the sentence ",Nvowels)
+END
